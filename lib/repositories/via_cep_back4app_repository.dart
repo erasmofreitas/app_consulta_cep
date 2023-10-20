@@ -33,8 +33,7 @@ class ViaCepBack4AppRepository {
 
   Future<void> atualizar(ConsultaViaCep model) async {
     try {
-      var response = await _dio.put("/ConsultaCep/${model.objectId}",
-          data: model.toJson());
+      await _dio.put("/ConsultaCep/${model.objectId}", data: model.toJson());
     } catch (e) {
       rethrow;
     }
