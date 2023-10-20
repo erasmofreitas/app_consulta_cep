@@ -13,7 +13,7 @@ class ViaCepRepository {
       var json = jsonDecode(response.body);
       var model = ConsultaViaCep.fromJson(json);
       var responseCep = await _back4appRepository.getCeps(model.cep);
-      if (responseCep.results == null) {
+      if (responseCep.results!.isEmpty) {
         await _back4appRepository.gravarCep(model);
       }
       return model;

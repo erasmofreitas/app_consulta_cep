@@ -84,6 +84,9 @@ class _ConsultaCEPState extends State<ConsultaCEP> {
                 "${consultaCep.localidade ?? ""} - ${consultaCep.uf ?? ""}",
                 style: const TextStyle(fontSize: 22),
               ),
+              const SizedBox(
+                height: 50,
+              ),
               const Text("Lista Ceps"),
               loading
                   ? const Center(
